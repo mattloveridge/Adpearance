@@ -1,0 +1,15 @@
+type Car {
+	id: ID!
+	vin: String
+	make: String
+	model: String
+	year: Int
+	vdpUrl: String
+	imageUrl: String
+	price: Float
+	msrp: Float
+}
+
+type Query {
+	searchCars: [Car]!
+}
