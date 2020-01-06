@@ -1,14 +1,17 @@
 package com.adpearance.datacollectionexercise.model;
 
+import java.util.List;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.Query;
 
 @Entity
 public class Car {
-
+	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
@@ -32,6 +35,31 @@ public class Car {
 
 	private Float msrp;
 
+
+	public Car(String vin,
+					String make,
+					String model,
+					Integer year,
+					String vpdUrl,
+					String imageUrl,
+					Float price,
+					Float msrp) {
+		
+		this.vin = vin;
+		this.make = make;
+		this.model = model;
+		this.year = year;
+		this.vdpUrl = vdpUrl;
+		this.imageUrl = imageUrl;
+		this.price = price;
+		this.msrp = msrp;
+	}
+
+	public Car() {
+	}
+
+
+	
 	public Long getId() { return id; }
 
 	public void setId(Long id) { this.id = id; }

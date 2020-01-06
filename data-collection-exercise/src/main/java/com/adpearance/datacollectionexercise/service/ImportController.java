@@ -18,8 +18,7 @@ public class ImportController {
 	
 	@PostMapping(value="/execute")
     public ResponseEntity<?> execute() throws Exception {
-		
-		// TODO wire up to ImportService
+
 		importService.execute(CLIENT_WEBSITE_URL);
 		
 		// TODO update to account for success and failure status
